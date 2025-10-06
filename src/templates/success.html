@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OAuth Success</title>
+  <style>
+    body {
+      background: #f0f8ff;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .success-box {
+      background: #fff;
+      border: 2px solid #4a90e2;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(74, 144, 226, 0.15);
+      padding: 2rem 2.5rem;
+      text-align: center;
+      max-width: 400px;
+      margin: auto;
+      animation: pop 0.5s;
+    }
+    @keyframes pop {
+      0% { transform: scale(0.9); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    h2 {
+      color: #1976d2;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px #e3f2fd;
+    }
+    p {
+      color: #333;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    .logo {
+      width: 120px;
+      margin-bottom: 0.5rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="success-box">
+    <img class="logo" src="https://vbrick.com/wp-content/uploads/Vbrick-Full-Color-Logo.png" alt="Vbrick Logo">
+    <h2>Login Successful</h2>
+    <p>You have successfully authenticated to the Vbrick Rev MCP server with OAuth2.</p>
+    <p>You may close this window and return to the application.</p>
+  </div>
+</body>
+</html>

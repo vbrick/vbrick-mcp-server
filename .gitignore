@@ -1,0 +1,28 @@
+# Node modules
+node_modules/
+
+# Dist output
+dist/
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.*
+
+# VS Code settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Test coverage
+coverage/
+
+# Ignore test results
+*.test-results.json
