@@ -9,6 +9,5 @@ export default defineConfig({
   sourcemap: true,
   shims: false,
   hash: false,
-  copy: [{ from: 'src/templates', to: 'dist/templates' }],
 //   noExternal: [/./]
 });

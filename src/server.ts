@@ -266,7 +266,7 @@ function exchangeToken(code: string, codeVerifier: string, res: ServerResponse) 
 }
 
 async function getHtmlTemplate(templateName: string): Promise<string> {
-  const templatePath = path.join(getFolderPath("templates"), templateName);
+  const templatePath = path.join(getFolderPath("../src/templates"), templateName);
   const html = await fs.promises.readFile(templatePath, "utf8");
   return html;
 }
