@@ -2,7 +2,7 @@ import http, { IncomingMessage, ServerResponse } from "node:http";
 import https from "node:https";
 import crypto from "node:crypto";
 import { config } from "./config.ts";
-import { setVbrickAccessToken } from "./vbrickUtilities.ts";
+import { getFolderPath, setVbrickAccessToken } from "./vbrickUtilities.ts";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from 'node:url';
@@ -266,7 +266,7 @@ function exchangeToken(code: string, codeVerifier: string, res: ServerResponse) 
 }
 
 async function getHtmlTemplate(templateName: string): Promise<string> {
-  const templatePath = path.join(__dirname, "templates", templateName);
+  const templatePath = path.join(getFolderPath("templates"), templateName);
   const html = await fs.promises.readFile(templatePath, "utf8");
   return html;
 }

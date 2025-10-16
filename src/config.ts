@@ -10,7 +10,7 @@ if (env) {
     envFile = `.env.${env}`;
 }
 
-let envpath = path.join(getFolderPath('.'), envFile);
+let envpath = path.join(getFolderPath('..'), envFile);
 
 console.warn(`Loading environment variables from ${envpath}`);
 dotenv.config({ path: envpath, quiet: true });
