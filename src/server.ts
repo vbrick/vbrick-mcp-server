@@ -1,11 +1,11 @@
-import http, { IncomingMessage, ServerResponse } from "http";
-import https from "https";
-import crypto from "crypto";
-import { config } from "./config.js";
-import { setVbrickAccessToken } from "./vbrickUtilities.js";
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from 'url';
+import http, { IncomingMessage, ServerResponse } from "node:http";
+import https from "node:https";
+import crypto from "node:crypto";
+import { config } from "./config.ts";
+import { setVbrickAccessToken } from "./vbrickUtilities.ts";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

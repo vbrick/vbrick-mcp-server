@@ -1,5 +1,5 @@
-import { makeVbrickRevApiRequest, authenticateVbrickAndScheduleRefresh } from "../vbrickUtilities.js";
-import { config } from "../config.js";
+import { makeVbrickRevApiRequest, authenticateVbrickAndScheduleRefresh } from "../vbrickUtilities.ts";
+import { config } from "../config.ts";
 
 async function runIntegrationTest() {
   // This test will only succeed if valid API_KEY and SECRET are set in environment variables

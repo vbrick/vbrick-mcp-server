@@ -1,13 +1,13 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-import fs from "fs";
-import path from "path";
-import { pathToFileURL } from 'url';
+import fs from "node:fs";
+import path from "node:path";
+import { pathToFileURL } from 'node:url';
 
-import { config } from "./config.js";
+import { config } from "./config.ts";
 
-import { authenticateVbrickAndScheduleRefresh, formatResponse, getFolderPath } from "./vbrickUtilities.js";
-import { startOAuthHandler, getOAuthAccessToken } from "./server.js";
+import { authenticateVbrickAndScheduleRefresh, formatResponse, getFolderPath } from "./vbrickUtilities.ts";
+import { startOAuthHandler, getOAuthAccessToken } from "./server.ts";
 import open from "open";
 
 const server = new McpServer({
