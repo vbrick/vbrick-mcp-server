@@ -1,4 +1,4 @@
-import { makeVbrickRevApiRequest, setVbrickAccessToken } from "../vbrickUtilities.js";
+import { makeVbrickRevApiRequest, setVbrickAccessToken } from "../vbrickUtilities.ts";
 
 async function testmakeVbrickRevApiRequestWithToken(token: string, testUrl: string) {
   setVbrickAccessToken(token);

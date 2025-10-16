@@ -1,6 +1,6 @@
 import { id } from "zod/v4/locales";
-import { config } from "../config.js";
-import { makeVbrickRevApiRequest, formatResponse } from "../vbrickUtilities.js";
+import { config } from "../config.ts";
+import { makeVbrickRevApiRequest, formatResponse } from "../vbrickUtilities.ts";
 import { z } from "zod";
 
 export const getVideoDetailsTool = {
