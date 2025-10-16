@@ -1,6 +1,6 @@
-import { fileURLToPath } from "url";
-import { config } from "./config.js";
-import path from "path";
+import { fileURLToPath } from "node:url";
+import { config } from "./config.ts";
+import path from "node:path";
 
 let vbrickAccessToken: string | null = null;
 let vbrickTokenRefreshTimeout: NodeJS.Timeout | null = null;

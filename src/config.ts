@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
-import path from 'path';
-import { getFolderPath } from './vbrickUtilities.js'
+import path from 'node:path';
+import { getFolderPath } from './vbrickUtilities.ts'
 
 const env = process.env.NODE_ENV;
 
