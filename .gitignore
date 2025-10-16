@@ -2,7 +2,7 @@
 node_modules/
 
 # Dist output
-dist/
+#dist/
 
 # Logs
 *.log
