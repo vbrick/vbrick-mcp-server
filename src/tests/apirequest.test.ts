@@ -1,4 +1,17 @@
+import { parseArgs } from "node:util";
 import { makeVbrickRevApiRequest, setVbrickAccessToken } from "../vbrickUtilities.ts";
+
+let {values: {token, url}} = parseArgs({
+  options: {
+    token: { type: 'string' },
+    url: { type: 'string' }
+  }
+});
+
+if (!token || !url) {
+  console.error(`Pass token and test url arguments: --token VBRICK_ACCESS_TOKEN --url "https://my.rev.tenant/api/v2/VIDEO_ID/transcription-files/en"`);
+  process.exit(1);
+}
 
 async function testmakeVbrickRevApiRequestWithToken(token: string, testUrl: string) {
   setVbrickAccessToken(token);
@@ -13,8 +26,8 @@ async function testmakeVbrickRevApiRequestWithToken(token: string, testUrl: stri
 }
 
 await testmakeVbrickRevApiRequestWithToken(
-    "AI1m7WKgi9GIjPZi0Im5gDCNJjZzVOKKEP110oa9LxX2UfCoYQZ47mJyeiQL6lSYkCqQpvGxh7MdJ1mmzPIalVgc2Ra_s52py01KWjBmAe94C85R7NZTaTwvhIHsA6_PpMP0rXaBDnVlkwDGe2WxjA2",
-    "http://avenger.vbricklab.com:9999/api/v2/videos/486c1512-24d3-4c27-9ab9-ef1cb3a02ac2/transcription-files/en").then(result => {
+    token,
+    url).then(result => {
     if (result) {
       console.log("Integration test succeeded.");
       process.exit(0);
