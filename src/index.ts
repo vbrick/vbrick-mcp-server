@@ -17,7 +17,7 @@ const server = new McpServer({
 
 function registerAuthorizeTool() {
   server.tool(
-    "vbick_authorize",
+    "vbrick_authorize",
     "This tool will let the user get logged in. You will not get a confirmation until the user logs in, so wait for that.",
     {},
     async function (_args, _extra) {
